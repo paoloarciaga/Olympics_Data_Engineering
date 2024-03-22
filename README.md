@@ -1,4 +1,4 @@
-# Olympic Summer & Winter Games, 1896-2022 
+# Olympic Summer & Winter Games, 1896-2022: Data Engineering
 ![alt text](image.png)
 
 ## Background 
@@ -10,4 +10,10 @@ This dataset's original files are comprised of all historical data on:
 - Olympic Medals
 - Olympic Results 
 
-## ETL 
+## Data Cleaning 
+- Olympic Hosts
+    - Original: ![alt text](image-1.png)
+    - Cleaned: ![alt text](image-2.png)
+- Olympic Athletes
+    - Original: ![alt text](image-3.png)
+    - Cleaned: ![alt text](image-4.png)
