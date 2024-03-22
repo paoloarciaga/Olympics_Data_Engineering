@@ -1,5 +1,4 @@
-# Olympic Summer & Winter Games, 1896-2022 # Data Engineering
-
+# Olympic Summer & Winter Games, 1896-2022 
 ![alt text](image.png)
 
 ## Background 
