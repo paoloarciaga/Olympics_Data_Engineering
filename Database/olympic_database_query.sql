@@ -13,5 +13,14 @@ ORDER BY discipline_title ASC;
 SELECT COUNT (DISTINCT athlete_url)
 FROM athletes;
 
+--Find all host countries included in hosts table
+SELECT DISTINCT(country)
+FROM hosts;
 
+--Count number of medals awarded when host country was Norway
+SELECT COUNT(medal_type)
+FROM medals AS m
+JOIN hosts AS h ON
+h.game_slug = m.slug_game
+WHERE h.country = 'Norway';
 
