@@ -2,15 +2,18 @@
 ![alt text](image.png)
 
 ## Background 
-This project was completed by Karan Dogra, Paolo Arciaga, Amy Larsen, and Richard Bialick. We used a historical dataset on the Olympic Games, including all the games from Athens 1896 to Beijing 2022 via [Kaggle](https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018) 
+This project was completed by Karan Dogra, Paolo Arciaga, Amy Larsen, and Richard Bialick. We used a historical dataset on the Olympic Games, including all the games from Athens 1896 to Beijing 2022.  
 
-This dataset's original files are comprised of all historical data on: 
-- Olympic Hosts
-- Olympic Athletes
-- Olympic Medals
-- Olympic Results 
+This dataset's original files are comprised of all historical data on:  
+- Olympic Athletes: personal information about athletes (name, short bio, etc.)
+- Olympic Medals: general information on medalists (Athlete or Team)
+- Olympic Hosts: hosts (year, city, country, etc)
+- Olympic Results: general information on results (Athlete or Team)
+
+Data Source: [Kaggle](https://www.kaggle.com/datasets/piterfm/olympic-games-medals-19862018)
 
 # ETL Workflow:
+With the Summer 2024 Olympic Games coming up, our goal was to create a database that can be used by anyone who wants to look up historical data on any past game up until our most recent Olympics, which was in 2022. 
 
 ## Data Cleaning 
 Extracted and transformed our original CSVs to create new DataFrames that were ultimately used as tables to create an ERD and a new SQL database.    
