@@ -16,15 +16,17 @@ This dataset's original files are comprised of all historical data on:
 Extracted and transformed our original CSVs to create new DataFrames that were ultimately used as tables to create an ERD and a new SQL database.    
 
 - ### Olympic Hosts
-- Original: ![alt text](image-1.png)
-- Cleaned: ![alt text](image-2.png)
-    - Converted the datetime columns to datetime format and removed the time 
-    - Split the city and year columns 
-    - Renamed columns  
-    - Exported the cleaned DataFrame as a CSV and saved to our repo 
+    - Original: ![alt text](image-1.png)
+    - Cleaned: ![alt text](image-2.png)
+        - Stored CSV into a Pandas DataFrame
+        - Converted the datetime columns to datetime format and removed the time 
+        - Split the city and year columns 
+        - Renamed columns  
+        - Exported the cleaned DataFrame as a CSV and saved to our repo 
 - ### Olympic Athletes
     - Original: ![alt text](image-3.png)
     - Cleaned: ![alt text](image-4.png)
+        - Stored CSV into a Pandas DataFrame
         - Split the athlete full name column into two separate first and last name columns 
         - Converted last names to lower case 
         - Capitalized the first letter of each last name 
@@ -34,13 +36,24 @@ Extracted and transformed our original CSVs to create new DataFrames that were u
         - Converted each medal column to an integer 
         - Dropped unwanted columns
         - Reordered and renamed columns 
+        - Used RegEx to format the first_olympics column as city-year 
         - Exported the cleaned DataFrame as a CSV and saved to our repo
 - ### Olympic Medals 
-    - Original: 
-    - Cleaned: 
+    - Original: ![alt text](image-7.png)
+    - Cleaned: ![alt text](image-8.png)
+        - Stored CSV into a Pandas DataFrame
+        - Capitalized the first letter of each last name 
+        - Grouped the data by 'discipline_title', 'slug_game', and 'country_name' columns
+        - Sorted a custom order to the 'slug_game' column
+        - Exported the cleaned DataFrame as a CSV and saved to our repo
 - ### Olympic Results
-    - Original: 
-    - Cleaned: 
+    - Original: ![alt text](image-9.png)
+    - Cleaned: ![alt text](image-10.png)
+        - Stored CSV into a Pandas DataFrame
+        - Replaced missing values in the 'athlete_full_name' columns with a space
+        - Capitalized the first letter of each last name 
+        - Separated 'athlete_url' column into multiple columns, due to games classified as 'GameTeam' populated multiple athletes into one 
+        - Exported the cleaned DataFrame as a CSV and saved to our repo
 - ### Combined Dataset 
 We combined the cleaned versions of the athlete and results table into 1 and named it Cleaned_Combined. 
 
