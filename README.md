@@ -3,6 +3,7 @@
 
 ## Background 
 This project was completed by Karan Dogra, Paolo Arciaga, Amy Larsen, and Richard Bialick. We used a historical dataset on the Olympic Games, including all the games from Athens 1896 to Beijing 2022.  
+    - More than 21,000 medals, 162,000 results, 74,000 athletes, 20,000 biographies, and 53 hosts of the Summer and Winter Olympic Games can be found in this dataset.
 
 This dataset's original files are comprised of all historical data on:  
 - Olympic Athletes: personal information about athletes (name, short bio, etc.)
@@ -64,6 +65,17 @@ We combined the cleaned versions of the athlete and results table into 1 and nam
 ![alt text](image-5.png)
 
 Upon finalizing our ERD, we successfully loaded our Athletes and Hosts tables first, and then successfully loaded our medals and combined results tables afterwards. 
+
+## Limitations 
+- Athlete_url caused complications because there were ~76,000 athletes urls in the Athletes table and ~162,000 total athletes (first and last names) in the Results table.
+    - All athletes in the Athletes table were in the Results table
+    - Not all athletes had urls in the Results table
+    - Not all athletes had unique names, but did have a unique url
+- For example, in the Athletes table, the “athlete_url” column contained multiple names/urls for team sports with multiple athletes. We chose to separate the individual athletes into separate columns (athlete_url, athlete1_url, athlete2_url). However, in this cleaning process, we did not create a single column with unique athletes. This meant that the athletes would not be a good primary key to connect the tables with.
+    - The solution was to create a unique identifier for the athletes in the Results table that did not have a urls, so we created the Cleaned_Results table which was a combination of the original Results and Athletes table
+- Data types are important in uploading the data
+    - When setting up the database in pgAdmin, a challenge was assigning the correct datatypes to the columns. Since our datasets were large (160,000 athletes, 50 sports, 200 participating countries, 26 host countries, etc) we couldn’t just eyeball the dataset to estimate how long the various strings were. My solution was to overestimate the characters to avoid getting the same error message again.
+    - Some numbers were integers initially but changed to numbers with decimals during the cleaning process. This affected the datatype that was uploaded into the database. Instead of an “Integer”, the number was now a “float”.
 
 ## How to Use & Interact With Our Database
 - Step 1: Start by downloading and/or using a SQL tool such as PostgreSQL/pgAdmin 
