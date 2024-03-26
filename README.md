@@ -62,7 +62,8 @@ Extracted and transformed our original CSVs to create new DataFrames that were u
 We combined the cleaned versions of the athlete and results table into 1 and named it Cleaned_Combined. 
 
 ## Additional Library
-We imported Seaborn to visualize the top 15 gold medal performing countries over the years
+- We imported Seaborn to visualize the top 15 gold medal performing countries over the years, which can be found in our cleaned_combined notebook. 
+
 ![alt text](image-11.png)
 
 ## Entity Relationship Diagram
@@ -70,7 +71,9 @@ We imported Seaborn to visualize the top 15 gold medal performing countries over
 
 Upon finalizing our ERD, we successfully loaded our Athletes and Hosts tables first, and then successfully loaded our medals and combined results tables afterwards. 
 
-## Limitations 
+## Limitations / Complications
+- Our data is limited to athletes that only participate as individuals or doubles. 
+    - Athletes that participated in events that are comprised of teams of more than 2 are not included in our dataset. 
 - Athlete_url caused complications because there were ~76,000 athletes urls in the Athletes table and ~162,000 total athletes (first and last names) in the Results table.
     - All athletes in the Athletes table were in the Results table
     - Not all athletes had urls in the Results table
