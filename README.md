@@ -61,6 +61,10 @@ Extracted and transformed our original CSVs to create new DataFrames that were u
 - ### Combined Dataset 
 We combined the cleaned versions of the athlete and results table into 1 and named it Cleaned_Combined. 
 
+## Additional Library
+We imported Seaborn to visualize the top 15 gold medal performing countries over the years
+![alt text](image-11.png)
+
 ## Entity Relationship Diagram
 ![alt text](image-5.png)
 
